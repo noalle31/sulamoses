@@ -1,5 +1,4 @@
 - Enharmonic spelling
-- Note octaves glitching
-![alt text](image.png)
+- Note octaves glitching (notes an octave too low)
 - Add more scales?
-- 
+- Some chords are still detected incorrectly
