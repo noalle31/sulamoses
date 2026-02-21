@@ -4,6 +4,7 @@ import ChordChart from './components/ChordChart.jsx';
 const API = 'http://localhost:3001';
 const IS_PROD = import.meta.env.PROD;
 const BASE_URL = import.meta.env.BASE_URL;
+const LOGO_URL = `${BASE_URL}moshe.png`;
 
 export default function App() {
   const [songs, setSongs] = useState([]);
@@ -66,8 +67,8 @@ export default function App() {
 
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '2rem', fontFamily: 'sans-serif' }}>
-      <img src="/moshe.png" alt="Moshe" style={{ display: 'block', width: 120, marginBottom: '1rem' }} />
-      <h1 style={{ marginBottom: '0.25rem' }}>Sulamoshe</h1>
+      <img src={LOGO_URL} alt="Moshe" style={{ display: 'block', width: 120, marginBottom: '1rem' }} />
+      <h1 style={{ marginBottom: '0.25rem' }}>Sulamoses</h1>
       <p style={{ color: '#666', marginTop: 0, marginBottom: '2rem' }}>
         Pick a lead sheet and get scale suggestions for every chord.
       </p>
