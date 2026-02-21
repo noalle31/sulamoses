@@ -33,7 +33,7 @@ export default function App() {
     fetch(`${API}/songs`)
       .then(r => r.json())
       .then(setSongs)
-      .catch(() => setError('Could not load song list.'));
+      .catch(() => setError('Could not load song list. Start the backend on http://localhost:3001.'));
   }, []);
 
   async function load() {
@@ -57,7 +57,7 @@ export default function App() {
       if (!res.ok) throw new Error('Load failed');
       setChords(await res.json());
     } catch {
-      setError('Something went wrong. Try again.');
+      setError('Something went wrong. Make sure backend is running on http://localhost:3001 and try again.');
     } finally {
       setLoading(false);
     }
