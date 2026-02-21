@@ -2,15 +2,33 @@ import { useState, useEffect } from 'react';
 import ChordChart from './components/ChordChart.jsx';
 
 const API = 'http://localhost:3001';
+const IS_PROD = import.meta.env.PROD;
+const BASE_URL = import.meta.env.BASE_URL;
 
 export default function App() {
   const [songs, setSongs] = useState([]);
   const [selected, setSelected] = useState('');
   const [chords, setChords] = useState(null);
+  const [cache, setCache] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (IS_PROD) {
+      fetch(`${BASE_URL}cache.json`)
+        .then(r => r.json())
+        .then(data => {
+          setCache(data);
+          const list = Object.keys(data).map(file => ({
+            file,
+            name: file.replace('.pdf', '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+          }));
+          setSongs(list);
+        })
+        .catch(() => setError('Could not load song list.'));
+      return;
+    }
+
     fetch(`${API}/songs`)
       .then(r => r.json())
       .then(setSongs)
@@ -23,6 +41,13 @@ export default function App() {
     setChords(null);
     setError(null);
     try {
+      if (IS_PROD) {
+        const data = cache?.[selected];
+        if (!data) throw new Error('Load failed');
+        setChords(data);
+        return;
+      }
+
       const res = await fetch(`${API}/analyse`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -70,7 +95,17 @@ export default function App() {
 
       {error && <p style={{ color: 'red', marginTop: '1rem' }}>{error}</p>}
 
-      {chords && <ChordChart songName={selectedName} chords={chords} imageUrl={`${API}/image/${selected}`} />}
+      {chords && (
+        <ChordChart
+          songName={selectedName}
+          chords={chords}
+          imageUrl={
+            IS_PROD
+              ? `${BASE_URL}images/${selected.replace('.pdf', '.1.png')}`
+              : `${API}/image/${selected}`
+          }
+        />
+      )}
     </div>
   );
 }

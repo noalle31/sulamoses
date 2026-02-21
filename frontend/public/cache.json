@@ -1,0 +1,2970 @@
+{
+  "afternoon-in-paris.pdf": [
+    [
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bbmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7b9",
+        "harmonic-function": "V7b9",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Mixolydian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7",
+        "harmonic-function": "V7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7",
+        "harmonic-function": "V7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "A7(b9)",
+        "harmonic-function": "V7b9",
+        "key": "D",
+        "scales": [
+          {
+            "name": "A Ionian"
+          },
+          {
+            "name": "A Lydian"
+          },
+          {
+            "name": "A Major Pentatonic"
+          },
+          {
+            "name": "A Mixolydian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7",
+        "harmonic-function": "V7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7",
+        "harmonic-function": "V7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bbmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7b9",
+        "harmonic-function": "V7b9",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "Cmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G7",
+        "harmonic-function": "V7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      }
+    ]
+  ],
+  "all-blues.pdf": [
+    [
+      {
+        "chord": "G7",
+        "harmonic-function": "I7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "G7",
+        "harmonic-function": "I7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "C7",
+        "harmonic-function": "IV7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "C7",
+        "harmonic-function": "IV7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "G7",
+        "harmonic-function": "I7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "G7",
+        "harmonic-function": "I7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      }
+    ]
+  ],
+  "cherokee.pdf": [
+    [
+      {
+        "chord": "Bbmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Ab7",
+        "harmonic-function": "IV7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Ab Mixolydian"
+          },
+          {
+            "name": "Ab Lydian Dominant"
+          },
+          {
+            "name": "Ab Altered"
+          },
+          {
+            "name": "Ab Half-Whole Diminished"
+          },
+          {
+            "name": "Ab Whole Tone"
+          },
+          {
+            "name": "Ab Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bb",
+        "harmonic-function": "V",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Major Pentatonic"
+          },
+          {
+            "name": "Bb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb",
+        "harmonic-function": "V",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Major Pentatonic"
+          },
+          {
+            "name": "Bb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "C7",
+        "harmonic-function": "V7",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "D-15 G9",
+        "harmonic-function": "ii7 V9",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Ionian"
+          },
+          {
+            "name": "D Lydian"
+          },
+          {
+            "name": "D Major Pentatonic"
+          },
+          {
+            "name": "D Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bb",
+        "harmonic-function": "I",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Major Pentatonic"
+          },
+          {
+            "name": "Bb Mixolydian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "C#-7",
+        "harmonic-function": "ii7",
+        "key": "B",
+        "scales": [
+          {
+            "name": "C# Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F#7",
+        "harmonic-function": "V7",
+        "key": "B",
+        "scales": [
+          {
+            "name": "F# Mixolydian"
+          },
+          {
+            "name": "F# Lydian Dominant"
+          },
+          {
+            "name": "F# Altered"
+          },
+          {
+            "name": "F# Half-Whole Diminished"
+          },
+          {
+            "name": "F# Whole Tone"
+          },
+          {
+            "name": "F# Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bbmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "B-7",
+        "harmonic-function": "ii7",
+        "key": "A",
+        "scales": [
+          {
+            "name": "B Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "E7",
+        "harmonic-function": "V7",
+        "key": "A",
+        "scales": [
+          {
+            "name": "E Mixolydian"
+          },
+          {
+            "name": "E Lydian Dominant"
+          },
+          {
+            "name": "E Altered"
+          },
+          {
+            "name": "E Half-Whole Diminished"
+          },
+          {
+            "name": "E Whole Tone"
+          },
+          {
+            "name": "E Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Amaj7",
+        "harmonic-function": "Imaj7",
+        "key": "A",
+        "scales": [
+          {
+            "name": "A Ionian"
+          },
+          {
+            "name": "A Lydian"
+          },
+          {
+            "name": "A Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "A-7",
+        "harmonic-function": "ii7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "A Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "D7",
+        "harmonic-function": "V7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "D Mixolydian"
+          },
+          {
+            "name": "D Lydian Dominant"
+          },
+          {
+            "name": "D Altered"
+          },
+          {
+            "name": "D Half-Whole Diminished"
+          },
+          {
+            "name": "D Whole Tone"
+          },
+          {
+            "name": "D Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Gmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "G Ionian"
+          },
+          {
+            "name": "G Lydian"
+          },
+          {
+            "name": "G Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Bbmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Ab7",
+        "harmonic-function": "IV7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Ab Mixolydian"
+          },
+          {
+            "name": "Ab Lydian Dominant"
+          },
+          {
+            "name": "Ab Altered"
+          },
+          {
+            "name": "Ab Half-Whole Diminished"
+          },
+          {
+            "name": "Ab Whole Tone"
+          },
+          {
+            "name": "Ab Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bb",
+        "harmonic-function": "V",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Major Pentatonic"
+          },
+          {
+            "name": "Bb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb",
+        "harmonic-function": "V",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Major Pentatonic"
+          },
+          {
+            "name": "Bb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "C7",
+        "harmonic-function": "V7",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F7",
+        "harmonic-function": "V7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Mixolydian"
+          },
+          {
+            "name": "F Lydian Dominant"
+          },
+          {
+            "name": "F Altered"
+          },
+          {
+            "name": "F Half-Whole Diminished"
+          },
+          {
+            "name": "F Whole Tone"
+          },
+          {
+            "name": "F Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bb",
+        "harmonic-function": "I",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "Bb Ionian"
+          },
+          {
+            "name": "Bb Lydian"
+          },
+          {
+            "name": "Bb Major Pentatonic"
+          },
+          {
+            "name": "Bb Mixolydian"
+          }
+        ]
+      }
+    ]
+  ],
+  "lullaby-of-birdland.pdf": [
+    [
+      {
+        "chord": "F-",
+        "harmonic-function": "i",
+        "key": "F",
+        "scales": [
+          {
+            "name": "F Dorian"
+          },
+          {
+            "name": "F Aeolian"
+          },
+          {
+            "name": "F Minor Pentatonic"
+          }
+        ]
+      },
+      {
+        "chord": "G9",
+        "harmonic-function": "ii9",
+        "key": "F",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "C9",
+        "harmonic-function": "V9",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "F-",
+        "harmonic-function": "i",
+        "key": "F",
+        "scales": [
+          {
+            "name": "F Dorian"
+          },
+          {
+            "name": "F Aeolian"
+          },
+          {
+            "name": "F Minor Pentatonic"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Db7",
+        "harmonic-function": "IV7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Db Mixolydian"
+          },
+          {
+            "name": "Db Lydian Dominant"
+          },
+          {
+            "name": "Db Altered"
+          },
+          {
+            "name": "Db Half-Whole Diminished"
+          },
+          {
+            "name": "Db Whole Tone"
+          },
+          {
+            "name": "Db Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "C9",
+        "harmonic-function": "V9",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "C9",
+        "harmonic-function": "V9",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "F-",
+        "harmonic-function": "i",
+        "key": "F",
+        "scales": [
+          {
+            "name": "F Dorian"
+          },
+          {
+            "name": "F Aeolian"
+          },
+          {
+            "name": "F Minor Pentatonic"
+          }
+        ]
+      },
+      {
+        "chord": "G9",
+        "harmonic-function": "ii9",
+        "key": "F",
+        "scales": [
+          {
+            "name": "G Mixolydian"
+          },
+          {
+            "name": "G Lydian Dominant"
+          },
+          {
+            "name": "G Altered"
+          },
+          {
+            "name": "G Half-Whole Diminished"
+          },
+          {
+            "name": "G Whole Tone"
+          },
+          {
+            "name": "G Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "C9",
+        "harmonic-function": "V9",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Mixolydian"
+          },
+          {
+            "name": "C Lydian Dominant"
+          },
+          {
+            "name": "C Altered"
+          },
+          {
+            "name": "C Half-Whole Diminished"
+          },
+          {
+            "name": "C Whole Tone"
+          },
+          {
+            "name": "C Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "F-",
+        "harmonic-function": "i",
+        "key": "F",
+        "scales": [
+          {
+            "name": "F Dorian"
+          },
+          {
+            "name": "F Aeolian"
+          },
+          {
+            "name": "F Minor Pentatonic"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      }
+    ]
+  ],
+  "misty.pdf": [
+    [
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Ab-7",
+        "harmonic-function": "ii7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Ab Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Db7",
+        "harmonic-function": "V7",
+        "key": "Gb",
+        "scales": [
+          {
+            "name": "Db Mixolydian"
+          },
+          {
+            "name": "Db Lydian Dominant"
+          },
+          {
+            "name": "Db Altered"
+          },
+          {
+            "name": "Db Half-Whole Diminished"
+          },
+          {
+            "name": "Db Whole Tone"
+          },
+          {
+            "name": "Db Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Ab-7",
+        "harmonic-function": "ii7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Ab Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Db7",
+        "harmonic-function": "V7",
+        "key": "Gb",
+        "scales": [
+          {
+            "name": "Db Mixolydian"
+          },
+          {
+            "name": "Db Lydian Dominant"
+          },
+          {
+            "name": "Db Altered"
+          },
+          {
+            "name": "Db Half-Whole Diminished"
+          },
+          {
+            "name": "Db Whole Tone"
+          },
+          {
+            "name": "Db Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "G-7",
+        "harmonic-function": "ii7",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Eb6",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Major Pentatonic"
+          },
+          {
+            "name": "Eb Mixolydian"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7sus(b4)",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Major Pentatonic"
+          },
+          {
+            "name": "Eb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Ab-7",
+        "harmonic-function": "ii7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Ab Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Db7",
+        "harmonic-function": "V7",
+        "key": "Gb",
+        "scales": [
+          {
+            "name": "Db Mixolydian"
+          },
+          {
+            "name": "Db Lydian Dominant"
+          },
+          {
+            "name": "Db Altered"
+          },
+          {
+            "name": "Db Half-Whole Diminished"
+          },
+          {
+            "name": "Db Whole Tone"
+          },
+          {
+            "name": "Db Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7sus",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Major Pentatonic"
+          },
+          {
+            "name": "Eb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "A-7",
+        "harmonic-function": "ii7",
+        "key": "D",
+        "scales": [
+          {
+            "name": "A Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "D-7",
+        "harmonic-function": "ii7",
+        "key": "G",
+        "scales": [
+          {
+            "name": "D Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "G-7b5",
+        "harmonic-function": "ii7b5",
+        "key": "C",
+        "scales": [
+          {
+            "name": "G Locrian ♮2"
+          },
+          {
+            "name": "G Locrian"
+          }
+        ]
+      },
+      {
+        "chord": "C-7b4",
+        "harmonic-function": "ii7b5",
+        "key": "F",
+        "scales": [
+          {
+            "name": "C Ionian"
+          },
+          {
+            "name": "C Lydian"
+          },
+          {
+            "name": "C Major Pentatonic"
+          },
+          {
+            "name": "C Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Bb-7",
+        "harmonic-function": "ii7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Eb7",
+        "harmonic-function": "V7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Eb Mixolydian"
+          },
+          {
+            "name": "Eb Lydian Dominant"
+          },
+          {
+            "name": "Eb Altered"
+          },
+          {
+            "name": "Eb Half-Whole Diminished"
+          },
+          {
+            "name": "Eb Whole Tone"
+          },
+          {
+            "name": "Eb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Abmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Ab",
+        "scales": [
+          {
+            "name": "Ab Ionian"
+          },
+          {
+            "name": "Ab Lydian"
+          },
+          {
+            "name": "Ab Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "Ab-7",
+        "harmonic-function": "ii7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Ab Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Db7",
+        "harmonic-function": "V7",
+        "key": "Gb",
+        "scales": [
+          {
+            "name": "Db Mixolydian"
+          },
+          {
+            "name": "Db Lydian Dominant"
+          },
+          {
+            "name": "Db Altered"
+          },
+          {
+            "name": "Db Half-Whole Diminished"
+          },
+          {
+            "name": "Db Whole Tone"
+          },
+          {
+            "name": "Db Phrygian Dominant"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "chord": "Ebmaj7",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Lydian Augmented"
+          }
+        ]
+      },
+      {
+        "chord": "C-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "C Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      },
+      {
+        "chord": "Eb6",
+        "harmonic-function": "Imaj7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Eb Ionian"
+          },
+          {
+            "name": "Eb Lydian"
+          },
+          {
+            "name": "Eb Major Pentatonic"
+          },
+          {
+            "name": "Eb Mixolydian"
+          }
+        ]
+      },
+      {
+        "chord": "F-7",
+        "harmonic-function": "ii7",
+        "key": "Bb",
+        "scales": [
+          {
+            "name": "F Dorian"
+          }
+        ]
+      },
+      {
+        "chord": "Bb7",
+        "harmonic-function": "V7",
+        "key": "Eb",
+        "scales": [
+          {
+            "name": "Bb Mixolydian"
+          },
+          {
+            "name": "Bb Lydian Dominant"
+          },
+          {
+            "name": "Bb Altered"
+          },
+          {
+            "name": "Bb Half-Whole Diminished"
+          },
+          {
+            "name": "Bb Whole Tone"
+          },
+          {
+            "name": "Bb Phrygian Dominant"
+          }
+        ]
+      }
+    ]
+  ]
+}
