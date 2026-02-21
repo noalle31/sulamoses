@@ -1,0 +1,7 @@
+backend/images/
+backend/cache.json
+frontend/node_modules
+node_modules/
+real-book/
+.env
+.DS_Store
