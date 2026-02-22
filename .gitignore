@@ -1,7 +1,6 @@
-backend/images/
-backend/cache.json
 frontend/node_modules
 node_modules/
-real-book/
+unused/
 .env
 .DS_Store
+TODO

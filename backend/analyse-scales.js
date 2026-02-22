@@ -3,10 +3,10 @@ export function getScales(chord, harmonicFunction = null) {
     if (!rootMatch) return [];
 
     const root = rootMatch[0];
-    const quality = chord.slice(root.length).trim();
+    const quality = chord.slice(root.length).trim().replace(/\/[A-G][b#]?$/, '');
 
-    // Dominant 7th / 9th: G7, C7, G9, C9, G7(9), G13
-    if (/^(7|9|13|7\(9\)|7add9)$/.test(quality)) {
+    // Dominant 7th / 9th / 13th: G7, C9, G13
+    if (/^(7|9|13)$/.test(quality)) {
         const all = [
             { name: `${root} Mixolydian` },
             { name: `${root} Lydian Dominant` },
@@ -19,8 +19,8 @@ export function getScales(chord, harmonicFunction = null) {
         return all;
     }
 
-    // Augmented dominant: F+7, F7#5, Faug7
-    if (/^(\+7|7#5|7\+|aug7)$/.test(quality)) {
+    // Augmented dominant: G7#5
+    if (/^(7#5)$/.test(quality)) {
         return [
             { name: `${root} Whole Tone` },
             { name: `${root} Altered` },
@@ -28,8 +28,8 @@ export function getScales(chord, harmonicFunction = null) {
         ];
     }
 
-    // Dominant 7b9: G7b9, G7/b9
-    if (/7[/]?b9$/.test(quality)) {
+    // Dominant 7b9 (and variants): G7b9, G7b9#9, G7b9#5
+    if (/^7b9/.test(quality)) {
         return [
             { name: `${root} Half-Whole Diminished` },
             { name: `${root} Phrygian Dominant` },
@@ -38,8 +38,48 @@ export function getScales(chord, harmonicFunction = null) {
         ];
     }
 
-    // Dominant sus: G7sus4, Gsus
-    if (/^(7sus4|sus4|sus)$/.test(quality)) {
+    // Dominant 7#9: G7#9, G7#9#5
+    if (/^7#9/.test(quality)) {
+        return [
+            { name: `${root} Altered` },
+            { name: `${root} Half-Whole Diminished` },
+            { name: `${root} Mixolydian` },
+        ];
+    }
+
+    // Dominant altered: G7alt
+    if (/^7alt$/.test(quality)) {
+        return [
+            { name: `${root} Altered` },
+        ];
+    }
+
+    // Dominant 7b5: G7b5
+    if (/^7b5$/.test(quality)) {
+        return [
+            { name: `${root} Lydian Dominant` },
+            { name: `${root} Whole Tone` },
+            { name: `${root} Altered` },
+        ];
+    }
+
+    // Dominant 7b13: G7b13
+    if (/^7b13$/.test(quality)) {
+        return [
+            { name: `${root} Altered` },
+            { name: `${root} Phrygian Dominant` },
+        ];
+    }
+
+    // Dominant 7#11 / 13#11: G7#11, G13#11
+    if (/^(7#11|13#11|9#11)$/.test(quality)) {
+        return [
+            { name: `${root} Lydian Dominant` },
+        ];
+    }
+
+    // Dominant sus: G7sus, G9sus, G13sus
+    if (/^(7sus|9sus|13sus|sus)$/.test(quality)) {
         return [
             { name: `${root} Mixolydian` },
             { name: `${root} Dorian` },
@@ -47,8 +87,8 @@ export function getScales(chord, harmonicFunction = null) {
         ];
     }
 
-    // Major 7th / 9th: Cmaj7, FΔ, Cmaj9
-    if (/^(maj7|Maj7|M7|maj|Δ7|Δ|maj9|Maj9|M9|9)$/.test(quality)) {
+    // Major 7th / 9th / 6th: C^7, C^9, C^, C6, C69, C2, Cadd9
+    if (/^(\^7|\^9|\^|6|69|2|add9)$/.test(quality)) {
         return [
             { name: `${root} Ionian` },
             { name: `${root} Lydian` },
@@ -56,50 +96,62 @@ export function getScales(chord, harmonicFunction = null) {
         ];
     }
 
-    // Minor Major 7: Cm(maj7)
-    if (/^(m\(maj7\)|-\(maj7\)|mM7|minMaj7)$/.test(quality)) {
+    // Major 7#11: C^7#11
+    if (/^(\^7#11|\^13)$/.test(quality)) {
+        return [
+            { name: `${root} Lydian` },
+        ];
+    }
+
+    // Major 7#5: C^7#5
+    if (/^(\^7#5)$/.test(quality)) {
+        return [
+            { name: `${root} Lydian Augmented` },
+        ];
+    }
+
+    // Minor major 7: C-^7, C-^9
+    if (/^(-\^7|-\^9)$/.test(quality)) {
         return [
             { name: `${root} Melodic Minor` },
         ];
     }
 
-    // Half-diminished: Bm7b5, Bø
-    if (/^(m7b5|m7♭5|-7b5|ø7|ø)$/.test(quality)) {
+    // Half-diminished: Ch7, Ch
+    if (/^(h7|h)$/.test(quality)) {
         return [
-            { name: `${root} Locrian ♮2` },
             { name: `${root} Locrian` },
         ];
     }
 
-    // Diminished 7th: Bdim7, B°
-    if (/^(dim7|°7|dim|°)$/.test(quality)) {
+    // Diminished 7th: Co7, Co
+    if (/^(o7|o)$/.test(quality)) {
         return [
             { name: `${root} Whole-Half Diminished` },
         ];
     }
 
-    // Minor 7th: Dm7, A-7
-    if (/^(m7|-7|min7)$/.test(quality)) {
+    // Minor 7th: D-7
+    if (/^(-7)$/.test(quality)) {
         if (harmonicFunction === 'ii7') return [
             { name: `${root} Dorian` },
         ];
-        if (harmonicFunction === 'vi7') return [
+        return [
             { name: `${root} Aeolian` },
-            { name: `${root} Dorian` },
         ];
-        if (harmonicFunction === 'iii7') return [
-            { name: `${root} Phrygian` },
-        ];
+    }
+
+    // Minor 9th / 11th / 6th: D-9, D-11, D-6, D-69, D-b6
+    if (/^(-9|-11|-6|-69|-b6)$/.test(quality)) {
         return [
             { name: `${root} Dorian` },
             { name: `${root} Aeolian` },
-            { name: `${root} Phrygian` },
             { name: `${root} Melodic Minor` },
         ];
     }
 
-    // Plain minor: Am, F-
-    if (/^(m|-)$/.test(quality)) {
+    // Plain minor: A-, A-/B
+    if (/^(-)$/.test(quality)) {
         return [
             { name: `${root} Dorian` },
             { name: `${root} Aeolian` },

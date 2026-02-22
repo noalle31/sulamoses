@@ -1,112 +1,88 @@
-import { useState, useEffect } from 'react';
-import ChordChart from './components/ChordChart.jsx';
+import { useState } from 'react'
+import ChordGrid from './components/ChordGrid'
+import './App.css'
 
-const API = 'http://localhost:3001';
-const IS_PROD = import.meta.env.PROD;
-const BASE_URL = import.meta.env.BASE_URL;
-const LOGO_URL = `${BASE_URL}moshe.png`;
-
-export default function App() {
+function App() {
   const [songs, setSongs] = useState([]);
-  const [selected, setSelected] = useState('');
-  const [chords, setChords] = useState(null);
-  const [cache, setCache] = useState(null);
+  const [selectedFileName, setSelectedFileName] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
 
-  useEffect(() => {
-    if (IS_PROD) {
-      fetch(`${BASE_URL}cache.json`)
-        .then(r => r.json())
-        .then(data => {
-          setCache(data);
-          const list = Object.keys(data).map(file => ({
-            file,
-            name: file.replace('.pdf', '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-          }));
-          setSongs(list);
-        })
-        .catch(() => setError('Could not load song list.'));
-      return;
-    }
-
-    fetch(`${API}/songs`)
-      .then(r => r.json())
-      .then(setSongs)
-      .catch(() => setError('Could not load song list. Start the backend on http://localhost:3001.'));
-  }, []);
-
-  async function load() {
-    if (!selected) return;
-    setLoading(true);
-    setChords(null);
-    setError(null);
-    try {
-      if (IS_PROD) {
-        const data = cache?.[selected];
-        if (!data) throw new Error('Load failed');
-        setChords(data);
-        return;
-      }
-
-      const res = await fetch(`${API}/analyse`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ songFile: selected }),
-      });
-      if (!res.ok) throw new Error('Load failed');
-      setChords(await res.json());
-    } catch {
-      setError('Something went wrong. Make sure backend is running on http://localhost:3001 and try again.');
-    } finally {
-      setLoading(false);
-    }
+  function normalizeSongs(payload) {
+    if (Array.isArray(payload)) return payload;
+    if (payload && Array.isArray(payload.songs)) return payload.songs;
+    if (payload && Array.isArray(payload.data)) return payload.data;
+    if (payload && payload.measures) return [payload];
+    return [];
   }
 
-  const selectedName = songs.find(s => s.file === selected)?.name ?? '';
+  function handleFileChange(e) {
+    const file = e.target.files[0]
+    if (!file) return
+    setSelectedFileName(file.name)
+    setError('')
+    setLoading(true)
+    setSongs([])
+
+    const formData = new FormData()
+    formData.append('file', file)
+
+    fetch('http://localhost:3001/upload', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(async (res) => {
+      if (!res.ok) {
+        throw new Error(`Upload failed (${res.status})`)
+      }
+      return res.json()
+    })
+    .then((data) => {
+      const normalized = normalizeSongs(data)
+      setSongs(normalized)
+      if (!normalized.length) {
+        setError('No songs were found in this file.')
+      }
+    })
+    .catch(() => {
+      setError('Could not load chart. Make sure backend is running on http://localhost:3001.')
+    })
+    .finally(() => setLoading(false))
+  }
+
+  const activeSong = songs?.[0]
+  const hasMeasures = Array.isArray(activeSong?.measures) && activeSong.measures.length > 0
+  const songTitle = activeSong?.title || selectedFileName.replace(/\.html?$/i, '') || 'No Chart Loaded'
 
   return (
-    <div style={{ maxWidth: 800, margin: '0 auto', padding: '2rem', fontFamily: 'sans-serif' }}>
-      <img src={LOGO_URL} alt="Moshe" style={{ display: 'block', width: 120, marginBottom: '1rem' }} />
-      <h1 style={{ marginBottom: '0.25rem' }}>Sulamoses</h1>
-      <p style={{ color: '#666', marginTop: 0, marginBottom: '2rem' }}>
-        Pick a lead sheet and get scale suggestions for every chord.
-      </p>
+    <div className="app-shell">
+      <header className="top-bar">
+        <div className="top-bar__left">Sulamoses</div>
+        <div className="top-bar__center">{songTitle}</div>
+        <div className="top-bar__right">
+          <label className="file-picker">
+            <span>Load Chart</span>
+            <input type="file" accept=".html" onChange={handleFileChange} />
+          </label>
+        </div>
+      </header>
 
-      <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-        <select
-          value={selected}
-          onChange={e => { setSelected(e.target.value); setChords(null); }}
-          style={{ flex: 1, padding: '0.5rem', fontSize: '1rem' }}
-        >
-          <option value="">— Select a song —</option>
-          {songs.map(s => (
-            <option key={s.file} value={s.file}>{s.name}</option>
-          ))}
-        </select>
+      {loading && <p className="status-message">Loading chart...</p>}
+      {!loading && error && <p className="status-message status-message--error">{error}</p>}
+      {!loading && !error && activeSong && !hasMeasures && (
+        <p className="status-message status-message--error">Chart loaded, but no measures were found.</p>
+      )}
 
-        <button
-          onClick={load}
-          disabled={!selected || loading}
-          style={{ padding: '0.5rem 1.25rem', fontSize: '1rem', cursor: selected && !loading ? 'pointer' : 'default' }}
-        >
-          {loading ? 'Loading…' : 'Load'}
-        </button>
-      </div>
-
-      {error && <p style={{ color: 'red', marginTop: '1rem' }}>{error}</p>}
-
-      {chords && (
-        <ChordChart
-          songName={selectedName}
-          chords={chords}
-          imageUrl={
-            IS_PROD
-              ? `${BASE_URL}images/${selected.replace('.pdf', '.1.png')}`
-              : `${API}/image/${selected}`
-          }
-        />
+      {activeSong && hasMeasures && (
+        <div className="sheet-page">
+          <section className="chart-header">
+            <h1 className="chart-header__title">{songTitle}</h1>
+          </section>
+          <ChordGrid measures={activeSong.measures} />
+        </div>
       )}
     </div>
-  );
+  )
 }
+
+export default App

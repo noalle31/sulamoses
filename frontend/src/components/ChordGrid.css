@@ -1,0 +1,154 @@
+.chord-grid {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 8px 6px;
+  background: #f4f4f4;
+  color: #101010;
+  border-radius: 0;
+  box-shadow: none;
+  display: grid;
+  grid-template-rows: repeat(var(--row-count, 1), minmax(0, 1fr));
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  margin: 0;
+  min-height: 0;
+}
+
+.measure {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  padding: clamp(4px, 0.55dvh, 8px) 10px clamp(2px, 0.35dvh, 6px) 18px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.measure::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: clamp(4px, 0.7dvh, 10px);
+  bottom: clamp(4px, 0.7dvh, 10px);
+  width: 2px;
+  background: #111;
+}
+
+.measure.is-last::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: clamp(4px, 0.7dvh, 10px);
+  bottom: clamp(4px, 0.7dvh, 10px);
+  width: 2px;
+  background: #111;
+}
+
+.chord {
+  font-family: 'Avenir Next Condensed', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(22px, 3.9dvh, 58px);
+  line-height: 0.88;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0f0f0f;
+  cursor: default;
+}
+
+.chord:hover {
+  color: #1a4f88;
+}
+
+.scale-panel {
+  position: fixed;
+  background: #ffffff;
+  color: #111;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  width: 380px;
+  z-index: 100;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.scale-panel h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.scale-panel ul {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.scale-panel li {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: default;
+}
+
+.scale-panel li:hover,
+.scale-panel li.selected {
+  background: #e8f0fa;
+  color: #1a4f88;
+}
+
+@media (max-width: 900px) {
+  .chord-grid {
+    width: 100%;
+    border-radius: 0;
+    padding: 0 4px 4px;
+  }
+
+  .measure {
+    padding: 4px 6px 4px 14px;
+    gap: 8px;
+  }
+
+  .measure::before {
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+  }
+
+  .measure.is-last::after {
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+  }
+
+  .chord {
+    font-size: clamp(16px, 2.8dvh, 34px);
+  }
+}
+
+@media (max-height: 920px) {
+  .measure {
+    padding: 3px 8px 3px 14px;
+    gap: 8px;
+  }
+
+  .measure::before {
+    top: 3px;
+    bottom: 3px;
+    left: 5px;
+  }
+
+  .measure.is-last::after {
+    top: 3px;
+    bottom: 3px;
+    right: 5px;
+  }
+
+  .chord {
+    font-size: clamp(17px, 2.9dvh, 38px);
+  }
+}

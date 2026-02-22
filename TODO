@@ -1,4 +1,9 @@
+V Swap to .irealb input
+- Add Bass clef support (Bass mode)
+- Add Tabs notation support
 - Enharmonic spelling
 - Note octaves glitching (notes an octave too low)
-- Add more scales?
-- Some chords are still detected incorrectly
+- Add more scale types?
+
+V Improve layout
+- Add support for mobile
