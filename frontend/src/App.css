@@ -9,7 +9,7 @@
   height: 74px;
   padding: 0 18px;
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) 2fr minmax(180px, 1fr);
+  grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr);
   align-items: center;
   gap: 12px;
   background: linear-gradient(90deg, #12283d 0%, #17314a 45%, #13283e 100%);
@@ -24,20 +24,47 @@
   letter-spacing: -0.025em;
 }
 
-.top-bar__center {
-  color: #edf6ff;
-  text-align: center;
-  font-size: clamp(22px, 2.2vw, 36px);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .top-bar__right {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.clef-toggle {
+  display: inline-flex;
+  border-radius: 8px;
+  border: 1px solid rgba(152, 203, 255, 0.48);
+  overflow: hidden;
+}
+
+.clef-btn {
+  height: 36px;
+  width: 40px;
+  background: rgba(126, 178, 228, 0.16);
+  border: none;
+  border-radius: 0;
+  color: #dff0ff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 120ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clef-btn + .clef-btn {
+  border-left: 1px solid rgba(152, 203, 255, 0.48);
+}
+
+.clef-btn--active {
+  background: rgba(126, 178, 228, 0.38);
+  color: #9ccff8;
+}
+
+.clef-btn:hover:not(.clef-btn--active) {
+  background: rgba(126, 178, 228, 0.28);
 }
 
 .file-picker {
@@ -74,7 +101,7 @@
   margin: 0;
   background: #f4f4f4;
   color: #101010;
-  padding: clamp(6px, 1.2dvh, 10px) clamp(12px, 1.5vw, 22px) clamp(3px, 0.7dvh, 6px);
+  padding: clamp(6px, 1.2dvh, 10px) clamp(12px, 1.5vw, 22px) clamp(14px, 2.2dvh, 28px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,14 +110,14 @@
 .chart-header__title {
   margin: 0;
   text-align: center;
-  font-size: clamp(24px, 2.6vw, 48px);
+  font-size: clamp(20px, 2.1vw, 38px);
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 
 .sheet-page {
   --a4-ratio: 1.4142;
-  width: min(98vw, calc((100dvh - 96px) / var(--a4-ratio)));
+  width: min(98vw, calc((100dvh - 128px) / var(--a4-ratio)));
   aspect-ratio: 1 / var(--a4-ratio);
   margin: 8px auto 0;
   background: #f4f4f4;
@@ -102,7 +129,7 @@
 }
 
 .status-message {
-  width: min(98vw, calc((100dvh - 96px) / 1.4142));
+  width: min(98vw, calc((100dvh - 128px) / 1.4142));
   margin: 8px auto 0;
   color: #d4e9ff;
   font-size: 16px;
@@ -125,22 +152,18 @@
     text-align: center;
   }
 
-  .top-bar__center {
-    font-size: 24px;
-  }
-
   .top-bar__right {
     justify-content: center;
   }
 
   .chart-header {
     width: 100%;
-    padding: 8px 12px 4px;
+    padding: 8px 12px 14px;
   }
 
   .sheet-page {
     width: 100vw;
-    height: calc(100dvh - 118px);
+    height: calc(100dvh - 132px);
     aspect-ratio: auto;
     margin-top: 0;
     border-radius: 0;
@@ -161,10 +184,10 @@
   }
 
   .chart-header {
-    padding: 6px 18px 2px;
+    padding: 6px 18px 12px;
   }
 
   .chart-header__title {
-    font-size: clamp(24px, 4dvh, 46px);
+    font-size: clamp(20px, 3.2dvh, 36px);
   }
 }

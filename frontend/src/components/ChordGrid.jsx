@@ -1,15 +1,18 @@
-import { useState, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import ScaleStaff from './ScaleStaff';
 import './ChordGrid.css'
 
-function ChordGrid({ measures }) {
+function ChordGrid({ measures, clef }) {
   const [hoveredChord, setHoveredChord] = useState(null);
   const [selectedScale, setSelectedScale] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [panelPos, setPanelPos] = useState({ x: 12, y: 12 });
   const leaveTimer = useRef(null);
+  const panelRef = useRef(null);
 
   function formatChordSymbol(symbol = '') {
     return symbol
+      .replace(/\s*\/\s*/g, '/')
       .replace(/\^/g, '∆')
       .replace(/h(?=\d|$)/g, 'ø');
   }
@@ -39,8 +42,42 @@ function ChordGrid({ measures }) {
   }
 
   const panelWidth = 380;
-  const panelX = Math.min(mousePos.x + 12, window.innerWidth - panelWidth - 16);
-  const panelY = Math.min(mousePos.y + 12, window.innerHeight - 320);
+  const viewportPadding = 12;
+  const panelX = Math.max(
+    viewportPadding,
+    Math.min(mousePos.x + 12, window.innerWidth - panelWidth - viewportPadding)
+  );
+  const panelY = Math.max(viewportPadding, mousePos.y + 12);
+  const panelMaxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
+
+  useLayoutEffect(() => {
+    if (!hoveredChord) return;
+    setPanelPos({ x: panelX, y: panelY });
+  }, [hoveredChord, panelX, panelY]);
+
+  useLayoutEffect(() => {
+    if (!hoveredChord || !panelRef.current) return;
+    const rect = panelRef.current.getBoundingClientRect();
+    let nextX = panelPos.x;
+    let nextY = panelPos.y;
+
+    if (rect.right > window.innerWidth - viewportPadding) {
+      nextX -= rect.right - (window.innerWidth - viewportPadding);
+    }
+    if (rect.left < viewportPadding) {
+      nextX += viewportPadding - rect.left;
+    }
+    if (rect.bottom > window.innerHeight - viewportPadding) {
+      nextY -= rect.bottom - (window.innerHeight - viewportPadding);
+    }
+    if (rect.top < viewportPadding) {
+      nextY += viewportPadding - rect.top;
+    }
+
+    if (nextX !== panelPos.x || nextY !== panelPos.y) {
+      setPanelPos({ x: Math.round(nextX), y: Math.round(nextY) });
+    }
+  }, [hoveredChord, selectedScale, panelPos.x, panelPos.y]);
 
   return (
     <>
@@ -48,7 +85,10 @@ function ChordGrid({ measures }) {
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {row.map((measure, i) => (
-              <div key={i} className={`measure ${i === row.length - 1 ? 'is-last' : ''}`}>
+              <div
+                key={i}
+                className={`measure ${i === row.length - 1 ? 'is-last' : ''} ${measure.length === 3 ? 'is-crowded' : ''} ${measure.length >= 4 ? 'is-dense' : ''}`}
+              >
                 {measure.map((chord, j) => (
                   <span
                     key={j}
@@ -67,8 +107,9 @@ function ChordGrid({ measures }) {
 
       {hoveredChord && (
         <div
+          ref={panelRef}
           className="scale-panel"
-          style={{ left: panelX, top: panelY }}
+          style={{ left: panelPos.x, top: panelPos.y, maxHeight: `${panelMaxHeight}px` }}
           onMouseEnter={handlePanelEnter}
           onMouseLeave={handlePanelLeave}
         >
@@ -84,7 +125,7 @@ function ChordGrid({ measures }) {
               </li>
             ))}
           </ul>
-          {selectedScale && <ScaleStaff scaleName={selectedScale} />}
+          {selectedScale && <ScaleStaff scaleName={selectedScale} clef={clef} />}
         </div>
       )}
     </>

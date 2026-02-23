@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ChordGrid from './components/ChordGrid'
+import { analyseSongs } from './analyse-songs.js'
 import './App.css'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   const [selectedFileName, setSelectedFileName] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [clef, setClef] = useState('treble');
 
   function normalizeSongs(payload) {
     if (Array.isArray(payload)) return payload;
@@ -24,30 +26,27 @@ function App() {
     setLoading(true)
     setSongs([])
 
-    const formData = new FormData()
-    formData.append('file', file)
-
-    fetch('http://localhost:3001/upload', {
-      method: 'POST',
-      body: formData,
-    })
-    .then(async (res) => {
-      if (!res.ok) {
-        throw new Error(`Upload failed (${res.status})`)
+    const reader = new FileReader()
+    reader.onload = (event) => {
+      try {
+        const html = event.target.result
+        const songs = analyseSongs(html)
+        const normalized = normalizeSongs(songs)
+        setSongs(normalized)
+        if (!normalized.length) {
+          setError('No songs were found in this file.')
+        }
+      } catch {
+        setError('Could not parse chart. Make sure the file is a valid iReal Pro export.')
+      } finally {
+        setLoading(false)
       }
-      return res.json()
-    })
-    .then((data) => {
-      const normalized = normalizeSongs(data)
-      setSongs(normalized)
-      if (!normalized.length) {
-        setError('No songs were found in this file.')
-      }
-    })
-    .catch(() => {
-      setError('Could not load chart. Make sure backend is running on http://localhost:3001.')
-    })
-    .finally(() => setLoading(false))
+    }
+    reader.onerror = () => {
+      setError('Could not read file.')
+      setLoading(false)
+    }
+    reader.readAsText(file)
   }
 
   const activeSong = songs?.[0]
@@ -58,8 +57,19 @@ function App() {
     <div className="app-shell">
       <header className="top-bar">
         <div className="top-bar__left">Sulamoses</div>
-        <div className="top-bar__center">{songTitle}</div>
         <div className="top-bar__right">
+          <div className="clef-toggle">
+            <button
+              className={`clef-btn ${clef === 'treble' ? 'clef-btn--active' : ''}`}
+              onClick={() => setClef('treble')}
+              title="Treble clef"
+            >𝄞</button>
+            <button
+              className={`clef-btn ${clef === 'bass' ? 'clef-btn--active' : ''}`}
+              onClick={() => setClef('bass')}
+              title="Bass clef"
+            >𝄢</button>
+          </div>
           <label className="file-picker">
             <span>Load Chart</span>
             <input type="file" accept=".html" onChange={handleFileChange} />
@@ -78,7 +88,7 @@ function App() {
           <section className="chart-header">
             <h1 className="chart-header__title">{songTitle}</h1>
           </section>
-          <ChordGrid measures={activeSong.measures} />
+          <ChordGrid measures={activeSong.measures} clef={clef} />
         </div>
       )}
     </div>

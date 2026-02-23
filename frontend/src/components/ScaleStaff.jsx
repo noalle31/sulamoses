@@ -44,22 +44,33 @@ function applyAlt(note, alt) {
   return note;
 }
 
-// 7-note diatonic modes: semitone intervals + [majorDegreeIndex, alteration] per note.
+// Diatonic-derived scales: semitone intervals + [majorDegreeIndex, alteration] per note.
 // The alteration is applied to the major scale degree letter to get correct enharmonic spelling.
 // e.g. C Dorian b3: major degree 2 = E, alt -1 → Eb (not D#)
+// Works for any number of notes — 5-note pentatonics, 6-note blues, 7-note modes, 8-note bebop.
 const DIATONIC_MODES = {
-  'Ionian':            { ivls: [0,2,4,5,7,9,11], degs: [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0]] },
-  'Dorian':            { ivls: [0,2,3,5,7,9,10], degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,0],[6,-1]] },
-  'Phrygian':          { ivls: [0,1,3,5,7,8,10], degs: [[0,0],[1,-1],[2,-1],[3,0],[4,0],[5,-1],[6,-1]] },
-  'Lydian':            { ivls: [0,2,4,6,7,9,11], degs: [[0,0],[1,0],[2,0],[3,1],[4,0],[5,0],[6,0]] },
-  'Mixolydian':        { ivls: [0,2,4,5,7,9,10], degs: [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,-1]] },
-  'Aeolian':           { ivls: [0,2,3,5,7,8,10], degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,-1],[6,-1]] },
-  'Locrian':           { ivls: [0,1,3,5,6,8,10], degs: [[0,0],[1,-1],[2,-1],[3,0],[4,-1],[5,-1],[6,-1]] },
-  'Melodic Minor':     { ivls: [0,2,3,5,7,9,11], degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,0],[6,0]] },
-  'Lydian Dominant':   { ivls: [0,2,4,6,7,9,10], degs: [[0,0],[1,0],[2,0],[3,1],[4,0],[5,0],[6,-1]] },
-  'Lydian Augmented':  { ivls: [0,2,4,6,8,9,11], degs: [[0,0],[1,0],[2,0],[3,1],[4,1],[5,0],[6,0]] },
-  'Phrygian Dominant': { ivls: [0,1,4,5,7,8,10], degs: [[0,0],[1,-1],[2,0],[3,0],[4,0],[5,-1],[6,-1]] },
-  'Locrian ♮2':        { ivls: [0,2,3,5,6,8,10], degs: [[0,0],[1,0],[2,-1],[3,0],[4,-1],[5,-1],[6,-1]] },
+  // 7-note modes
+  'Ionian':            { ivls: [0,2,4,5,7,9,11],    degs: [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0]] },
+  'Dorian':            { ivls: [0,2,3,5,7,9,10],    degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,0],[6,-1]] },
+  'Phrygian':          { ivls: [0,1,3,5,7,8,10],    degs: [[0,0],[1,-1],[2,-1],[3,0],[4,0],[5,-1],[6,-1]] },
+  'Lydian':            { ivls: [0,2,4,6,7,9,11],    degs: [[0,0],[1,0],[2,0],[3,1],[4,0],[5,0],[6,0]] },
+  'Mixolydian':        { ivls: [0,2,4,5,7,9,10],    degs: [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,-1]] },
+  'Aeolian':           { ivls: [0,2,3,5,7,8,10],    degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,-1],[6,-1]] },
+  'Locrian':           { ivls: [0,1,3,5,6,8,10],    degs: [[0,0],[1,-1],[2,-1],[3,0],[4,-1],[5,-1],[6,-1]] },
+  'Melodic Minor':     { ivls: [0,2,3,5,7,9,11],    degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,0],[6,0]] },
+  'Lydian Dominant':   { ivls: [0,2,4,6,7,9,10],    degs: [[0,0],[1,0],[2,0],[3,1],[4,0],[5,0],[6,-1]] },
+  'Lydian Augmented':  { ivls: [0,2,4,6,8,9,11],    degs: [[0,0],[1,0],[2,0],[3,1],[4,1],[5,0],[6,0]] },
+  'Phrygian Dominant': { ivls: [0,1,4,5,7,8,10],    degs: [[0,0],[1,-1],[2,0],[3,0],[4,0],[5,-1],[6,-1]] },
+  'Locrian ♮2':        { ivls: [0,2,3,5,6,8,10],    degs: [[0,0],[1,0],[2,-1],[3,0],[4,-1],[5,-1],[6,-1]] },
+  // 5-note pentatonic scales
+  'Major Pentatonic':  { ivls: [0,2,4,7,9],          degs: [[0,0],[1,0],[2,0],[4,0],[5,0]] },
+  'Minor Pentatonic':  { ivls: [0,3,5,7,10],          degs: [[0,0],[2,-1],[3,0],[4,0],[6,-1]] },
+  // 6-note blues scale (minor pentatonic + b5 passing tone)
+  'Blues':             { ivls: [0,3,5,6,7,10],        degs: [[0,0],[2,-1],[3,0],[4,-1],[4,0],[6,-1]] },
+  // 8-note bebop scales (diatonic mode + one chromatic passing tone)
+  'Major Bebop':       { ivls: [0,2,4,5,7,8,9,11],   degs: [[0,0],[1,0],[2,0],[3,0],[4,0],[5,-1],[5,0],[6,0]] },
+  'Dominant Bebop':    { ivls: [0,2,4,5,7,9,10,11],  degs: [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,-1],[6,0]] },
+  'Minor Bebop':       { ivls: [0,2,3,5,7,9,10,11],  degs: [[0,0],[1,0],[2,-1],[3,0],[4,0],[5,0],[6,-1],[6,0]] },
 };
 
 // Non-diatonic scales: chromatic intervals + which absolute chromatic indices use flat spelling
@@ -71,8 +82,6 @@ const CHROMATIC_SCALES = {
   'Half-Whole Diminished': { ivls: [0,1,3,4,6,7,9,10], flats: new Set([1,3,6,10]) },
   'Whole-Half Diminished': { ivls: [0,2,3,5,6,8,9,11], flats: new Set([3,6,8]) },
   'Whole Tone':            { ivls: [0,2,4,6,8,10],      flats: new Set([8,10]) },
-  'Minor Pentatonic':      { ivls: [0,3,5,7,10],        flats: new Set([3,10]) },
-  'Major Pentatonic':      { ivls: [0,2,4,7,9],         flats: new Set() },
 };
 
 const ROOT_TO_INDEX = {
@@ -80,7 +89,7 @@ const ROOT_TO_INDEX = {
   'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11,
 };
 
-function buildNotes(scaleName) {
+function buildNotes(scaleName, clef = 'treble') {
   const match = scaleName.match(/^([A-G][#b]?)\s+(.+)$/);
   if (!match) return null;
 
@@ -88,6 +97,9 @@ function buildNotes(scaleName) {
   const mode = match[2];
   const rootIdx = ROOT_TO_INDEX[root];
   if (rootIdx === undefined) return null;
+
+  // Bass clef: roots C–Eb (rootIdx 0–3) start at octave 3; E–B (rootIdx 4–11) start at octave 2.
+  const baseOctave = clef === 'bass' ? (rootIdx >= 4 ? 2 : 3) : 4;
 
   // 7-note diatonic mode: use major scale degree letters + alteration
   if (DIATONIC_MODES[mode]) {
@@ -97,7 +109,7 @@ function buildNotes(scaleName) {
 
     return degs.map(([degIdx, alt], i) => {
       const noteName = applyAlt(majorScale[degIdx], alt);
-      const octave = 4 + Math.floor((rootIdx + ivls[i]) / 12);
+      const octave = baseOctave + Math.floor((rootIdx + ivls[i]) / 12);
       return `${noteName}${octave}`;
     });
   }
@@ -108,7 +120,7 @@ function buildNotes(scaleName) {
     return ivls.map(interval => {
       const absIdx = rootIdx + interval;
       const noteIdx = absIdx % 12;
-      const octave = 4 + Math.floor(absIdx / 12);
+      const octave = baseOctave + Math.floor(absIdx / 12);
       const noteName = flats.has(noteIdx) ? CHROMATIC_FLAT[noteIdx] : CHROMATIC_SHARP[noteIdx];
       return `${noteName}${octave}`;
     });
@@ -117,11 +129,11 @@ function buildNotes(scaleName) {
   return null;
 }
 
-export default function ScaleStaff({ scaleName }) {
+export default function ScaleStaff({ scaleName, clef = 'treble' }) {
   const ref = useRef(null);
 
   useEffect(() => {
-    const notes = buildNotes(scaleName);
+    const notes = buildNotes(scaleName, clef);
     if (!notes) return;
 
     const el = ref.current;
@@ -135,6 +147,8 @@ export default function ScaleStaff({ scaleName }) {
       const score = vf.EasyScore();
       const system = vf.System({ width: width - 20 });
 
+      score.set({ clef });
+
       system.addStave({
         voices: [
           score.voice(
@@ -142,13 +156,13 @@ export default function ScaleStaff({ scaleName }) {
             { time: `${n}/4` }
           ),
         ],
-      }).addClef('treble');
+      }).addClef(clef);
 
       vf.draw();
     } catch (e) {
       console.error('VexFlow render error:', e);
     }
-  }, [scaleName]);
+  }, [scaleName, clef]);
 
   return <div ref={ref} />;
 }

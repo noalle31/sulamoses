@@ -1,5 +1,5 @@
 .chord-grid {
-  width: 100%;
+  width: 98%;
   height: 100%;
   margin: 0;
   padding: 0 8px 6px;
@@ -17,48 +17,94 @@
   width: 100%;
   margin: 0;
   min-height: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.row::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: clamp(2px, 0.45dvh, 6px);
+  bottom: clamp(2px, 0.45dvh, 6px);
+  width: 2px;
+  background: #111;
+  z-index: 2;
 }
 
 .measure {
   position: relative;
+  min-width: 0;
   min-height: 0;
   height: 100%;
-  padding: clamp(4px, 0.55dvh, 8px) 10px clamp(2px, 0.35dvh, 6px) 18px;
+  padding: clamp(2px, 0.35dvh, 5px) 10px clamp(0px, 0.2dvh, 3px) 18px;
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.measure.is-dense {
+  gap: 3px;
+  padding-right: 2px;
 }
 
 .measure::before {
   content: '';
   position: absolute;
   left: 8px;
-  top: clamp(4px, 0.7dvh, 10px);
-  bottom: clamp(4px, 0.7dvh, 10px);
+  top: clamp(2px, 0.45dvh, 6px);
+  bottom: clamp(2px, 0.45dvh, 6px);
   width: 2px;
   background: #111;
 }
 
-.measure.is-last::after {
-  content: '';
-  position: absolute;
-  right: 8px;
-  top: clamp(4px, 0.7dvh, 10px);
-  bottom: clamp(4px, 0.7dvh, 10px);
-  width: 2px;
-  background: #111;
+.measure.is-last {
+  padding-right: 10px;
+}
+
+.row > .measure:last-child {
+  box-shadow: none;
+  background: transparent;
 }
 
 .chord {
   font-family: 'Avenir Next Condensed', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(22px, 3.9dvh, 58px);
-  line-height: 0.88;
+  font-size: clamp(20px, 3.6dvh, 52px);
+  line-height: 0.9;
   font-weight: 600;
   letter-spacing: -0.02em;
+  white-space: nowrap;
   color: #0f0f0f;
   cursor: default;
+}
+
+.measure.is-crowded .chord {
+  font-size: clamp(18px, 3dvh, 44px);
+}
+
+.measure.is-dense .chord {
+  font-size: clamp(15px, 2.5dvh, 34px);
+  letter-spacing: -0.025em;
+}
+
+.measure.is-last.is-crowded {
+  gap: 6px;
+}
+
+.measure.is-last.is-dense {
+  gap: 1px;
+  padding-right: 1px;
+}
+
+.measure.is-last.is-crowded .chord {
+  font-size: clamp(17px, 3dvh, 42px);
+}
+
+.measure.is-last.is-dense .chord {
+  font-size: clamp(15px, 2.5dvh, 34px);
+  letter-spacing: -0.03em;
 }
 
 .chord:hover {
@@ -73,6 +119,9 @@
   border-radius: 10px;
   padding: 12px 14px;
   width: 380px;
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   z-index: 100;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
 }
@@ -109,46 +158,83 @@
   }
 
   .measure {
-    padding: 4px 6px 4px 14px;
-    gap: 8px;
+    padding: 2px 6px 2px 14px;
+    gap: 7px;
+  }
+
+  .measure.is-dense {
+    gap: 2px;
+    padding-right: 2px;
+  }
+
+  .measure.is-last {
+    padding-right: 8px;
   }
 
   .measure::before {
     left: 4px;
-    top: 4px;
-    bottom: 4px;
+    top: 2px;
+    bottom: 2px;
   }
 
-  .measure.is-last::after {
-    right: 4px;
-    top: 4px;
-    bottom: 4px;
+  .row > .measure:last-child {
+    padding-right: 8px;
   }
 
-  .chord {
-    font-size: clamp(16px, 2.8dvh, 34px);
+  .row::after {
+    right: 8px;
+    top: 2px;
+    bottom: 2px;
+  }
+
+  .measure.is-last.is-crowded {
+    gap: 4px;
+  }
+
+  .measure.is-last.is-dense {
+    gap: 1px;
+    padding-right: 1px;
   }
 }
 
 @media (max-height: 920px) {
   .measure {
-    padding: 3px 8px 3px 14px;
-    gap: 8px;
+    padding: 2px 8px 2px 14px;
+    gap: 7px;
+  }
+
+  .measure.is-dense {
+    gap: 2px;
+    padding-right: 2px;
+  }
+
+  .measure.is-last {
+    padding-right: 8px;
   }
 
   .measure::before {
-    top: 3px;
-    bottom: 3px;
+    top: 2px;
+    bottom: 2px;
     left: 5px;
   }
 
-  .measure.is-last::after {
-    top: 3px;
-    bottom: 3px;
-    right: 5px;
+  .row > .measure:last-child {
+    padding-right: 8px;
   }
 
-  .chord {
-    font-size: clamp(17px, 2.9dvh, 38px);
+  .row::after {
+    right: 8px;
+    top: 2px;
+    bottom: 2px;
   }
+
+  .measure.is-last.is-crowded {
+    gap: 4px;
+  }
+
+  .measure.is-last.is-dense {
+    gap: 1px;
+    padding-right: 1px;
+  }
+
 }
