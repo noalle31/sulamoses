@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import ScaleStaff from './ScaleStaff';
 import './ChordGrid.css'
 
@@ -7,6 +7,7 @@ function ChordGrid({ measures, clef }) {
   const [selectedScale, setSelectedScale] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const [panelPos, setPanelPos] = useState({ x: 12, y: 12 });
+  const [isTouchOpen, setIsTouchOpen] = useState(false);
   const leaveTimer = useRef(null);
   const panelRef = useRef(null);
 
@@ -22,6 +23,47 @@ function ChordGrid({ measures, clef }) {
     setHoveredChord(chord);
     setSelectedScale(chord.scales?.[0]?.name ?? null);
     setMousePos({ x: e.clientX, y: e.clientY });
+    setIsTouchOpen(false);
+  };
+
+  useEffect(() => {
+    if (!isTouchOpen) return;
+    const handleOutsideTap = (e) => {
+      if (panelRef.current && !panelRef.current.contains(e.target)) {
+        closePanel();
+      }
+    };
+    document.addEventListener('touchend', handleOutsideTap);
+    return () => document.removeEventListener('touchend', handleOutsideTap);
+  }, [isTouchOpen]);
+
+  const handleChordTap = (chord, e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    clearTimeout(leaveTimer.current);
+    if (hoveredChord === chord) {
+      setHoveredChord(null);
+      setIsTouchOpen(false);
+      return;
+    }
+    const touch = e.changedTouches?.[0];
+    if (!touch) return;
+
+    const padding = 12;
+    const actualPanelWidth = Math.min(380, window.innerWidth - padding * 2);
+    const x = Math.max(padding, Math.min(
+      touch.clientX - actualPanelWidth / 2,
+      window.innerWidth - actualPanelWidth - padding
+    ));
+    const estimatedPanelHeight = 300;
+    const y = (window.innerHeight - touch.clientY - 30 >= estimatedPanelHeight)
+      ? touch.clientY + 20
+      : Math.max(padding, touch.clientY - estimatedPanelHeight - 10);
+
+    setHoveredChord(chord);
+    setSelectedScale(chord.scales?.[0]?.name ?? null);
+    setPanelPos({ x, y });
+    setIsTouchOpen(true);
   };
 
   const handleChordLeave = () => {
@@ -34,6 +76,11 @@ function ChordGrid({ measures, clef }) {
 
   const handlePanelLeave = () => {
     leaveTimer.current = setTimeout(() => setHoveredChord(null), 150);
+  };
+
+  const closePanel = () => {
+    setHoveredChord(null);
+    setIsTouchOpen(false);
   };
 
   const rows = []
@@ -51,12 +98,12 @@ function ChordGrid({ measures, clef }) {
   const panelMaxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
 
   useLayoutEffect(() => {
-    if (!hoveredChord) return;
+    if (!hoveredChord || isTouchOpen) return;
     setPanelPos({ x: panelX, y: panelY });
-  }, [hoveredChord, panelX, panelY]);
+  }, [hoveredChord, isTouchOpen, panelX, panelY]);
 
   useLayoutEffect(() => {
-    if (!hoveredChord || !panelRef.current) return;
+    if (!hoveredChord || !panelRef.current || isTouchOpen) return;
     const rect = panelRef.current.getBoundingClientRect();
     let nextX = panelPos.x;
     let nextY = panelPos.y;
@@ -77,7 +124,7 @@ function ChordGrid({ measures, clef }) {
     if (nextX !== panelPos.x || nextY !== panelPos.y) {
       setPanelPos({ x: Math.round(nextX), y: Math.round(nextY) });
     }
-  }, [hoveredChord, selectedScale, panelPos.x, panelPos.y]);
+  }, [hoveredChord, selectedScale, panelPos.x, panelPos.y, isTouchOpen]);
 
   return (
     <>
@@ -95,6 +142,7 @@ function ChordGrid({ measures, clef }) {
                     className="chord"
                     onMouseEnter={(e) => handleChordEnter(chord, e)}
                     onMouseLeave={handleChordLeave}
+                    onTouchEnd={(e) => handleChordTap(chord, e)}
                   >
                     {formatChordSymbol(chord.chord)}
                   </span>
@@ -108,11 +156,14 @@ function ChordGrid({ measures, clef }) {
       {hoveredChord && (
         <div
           ref={panelRef}
-          className="scale-panel"
+          className={`scale-panel${isTouchOpen ? ' is-touch' : ''}`}
           style={{ left: panelPos.x, top: panelPos.y, maxHeight: `${panelMaxHeight}px` }}
           onMouseEnter={handlePanelEnter}
           onMouseLeave={handlePanelLeave}
         >
+          {isTouchOpen && (
+            <button className="scale-panel-close" onClick={closePanel}>×</button>
+          )}
           <h3>{formatChordSymbol(hoveredChord.chord)}</h3>
           <ul>
             {hoveredChord.scales.map((scale, i) => (
@@ -120,6 +171,7 @@ function ChordGrid({ measures, clef }) {
                 key={i}
                 className={selectedScale === scale.name ? 'selected' : ''}
                 onMouseEnter={() => setSelectedScale(scale.name)}
+                onClick={() => setSelectedScale(scale.name)}
               >
                 {scale.name}
               </li>
