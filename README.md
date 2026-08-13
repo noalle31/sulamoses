@@ -6,7 +6,7 @@ Sulamoses is a tool I built for my dad, to help him with scales and modes in jaz
 
 ## Usage
 
-1. In iReal Pro, open a chart and export it as HTML (Song → Share → Export → HTML), OR just use the sample chart in this repo, [A Felicidade.html](A%20Felicidade.html).
+1. Use the sample chart in this repo, [A Felicidade.html](A%20Felicidade.html), OR in iReal Pro, open a chart and export it as HTML (Song → Share → Export → HTML) 
 2. Open the [live app](https://noalle31.github.io/sulamoses/) and click **Load Chart**, then select the exported `.html` file.
 3. The chart renders as a chord grid with harmonic analysis and suggested scales underneath each chord. Use the clef toggle in the top bar to switch between treble and bass clef.
 
