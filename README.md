@@ -2,8 +2,6 @@
 
 Sulamoses is a tool I built for my dad, to help him with scales and modes in jazz improvisation. Load a jazz standard chart (exported as .html), and it displays harmonic analysis and per-chord scale suggestions on a music staff (you can also flip between treble and bass clef!)
 
-**Live app: https://noalle31.github.io/sulamoses/** (deployed automatically to GitHub Pages from `main` — see [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml))
-
 ## Usage
 
 1. Use the sample chart in this repo, [A Felicidade.html](A%20Felicidade.html), OR in iReal Pro, open a chart and export it as HTML (Song → Share → Export → HTML) 
